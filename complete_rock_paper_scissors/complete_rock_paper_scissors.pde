@@ -33,10 +33,44 @@ void draw() {
 
   text("Computer Choice:", 100, 400);
   text(computerChoice, 500, 400);
-  
-  
+ //credit to david 
+  if (userChoice == "Paper" && computerChoice == "Scissors") { 
+    text("YOU LOSE", 310, 350);
 }
 
+if (userChoice == "Paper" && computerChoice == "Rock") { 
+    text("YOU WIN", 310, 350);
+}
+
+if (userChoice == "Paper" && computerChoice == "Paper") { 
+    text("TIE", 310, 350);
+}
+
+if (userChoice == "Rock" && computerChoice == "Scissors") { 
+    text("YOU WIN", 310, 350);
+}
+
+if (userChoice == "Rock" && computerChoice == "Paper") { 
+    text("YOU LOSE", 310, 350);
+}
+
+if (userChoice == "Rock" && computerChoice == "Rock") { 
+    text("TIE", 310, 350);
+}
+
+if (userChoice == "Scissors" && computerChoice == "Paper") { 
+    text("YOU WIN", 310, 350);
+}
+
+if (userChoice == "Scissors" && computerChoice == "Rock") { 
+    text("YOU LOSE", 310, 350);
+}
+
+if (userChoice == "Scissors" && computerChoice == "Scissors") { 
+    text("TIE", 310, 350);
+}
+//end credit to david
+}
 void mousePressed() {
 
   if (mouseX > width / 3 - 50 &&
