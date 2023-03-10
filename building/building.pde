@@ -2,61 +2,50 @@ int rand;
 
 void setup() {
   //rectMode(CENTER);
-size(600,600);
-
+size(1000,800);
+ background(0);
+ push();
+ translate(-300,-300);
+ for(int b = 1; b <= 6; b = b+1) {
+   building(200);
+   translate(160,0);
+ }
+ pop();
+ translate(-400,-200);
+ for(int b = 1; b <= 6; b = b+1) {
+   buildingg();
+   translate(160,0);
+ }
+ push();
+ translate(-850,200);
+ for(int b = 1; b <= 6; b = b+1) {
+   building(random(100, 200));
+   translate(160,0);
+ }
+ pop();
+ 
+ push();
+ translate(-950,250);
+ for(int b = 1; b <= 6; b = b+1) {
+   buildingg();
+   translate(160,0);
+ }
+ pop();
 }
 
+
 void draw() {
- background(0);
-  building();
-  buildingg();
-  translate(-400,0);
-  buildingg();
-  translate(500,-200);
-  buildingg();
-  translate(-350,-200);
-  buildingg();
-  translate(-150,200);
-  building();
-  translate(150,20);
-  building();
-  translate(350,200);
-  buildingg();
-  translate(-200,rand);
-  buildingg();
-  translate(rand,rand);
-  building();
-  translate(-100,-100);
-  building();
-  translate(-150,rand);
-  buildingg();
-  translate(-400,0);
-  buildingg();
-  translate(500,-200);
-  buildingg();
-  translate(-350,-200);
-  buildingg();
-  translate(-150,200);
-  building();
-  translate(150,20);
-  building();
-  translate(350,200);
-  buildingg();
-  translate(-200,rand);
-  buildingg();
-  translate(rand,rand);
-  building();
-  translate(-100,-100);
-  building();
-  translate(-150,rand);
-  buildingg();
-  translate(200,rand);
-  building();
+
+   //building(200);
+   //translate(200,250);
+   //building(400);
+ 
   
 }
 
 void building(//float xCenter,
-//float yBottom, float w,
+//float yBottom, 
+float w 
 //int numFloors,
 //int numWindows,
 //boolean isDouble)
@@ -64,10 +53,10 @@ void building(//float xCenter,
 {
   //door base code: rect(300,580,200/4,40);
   fill(235);
-  rect(300,300,200,300);
+  rect(300,300,w,300);
   fill(255,255,0);
-  square(320,350,50);
-  square(430,350,50);
+  square(320,350,w/4);
+  square(300 + w - w/4 - 20,350,w/4);
   fill(255,228,196);
   rect(320,430,50,200,75);
   fill(0,255,0);
